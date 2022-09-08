@@ -1,0 +1,152 @@
+.hero {
+    .container {
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+        }
+    }
+
+    &__grid {
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: rem(64px);
+        }
+    }
+
+    &__text {
+        @include media-breakpoint-up(lg) {
+            padding-top: rem(20px);
+            padding-right: rem(40px);
+        }
+
+        @include media-breakpoint-down(lg) {
+            @include center(vertical);
+            left: 0;
+            padding: rem(30px);
+        }
+
+        .btn {
+            margin-top: rem(20px);
+
+            @include media-breakpoint-up(lg) {
+                margin-top: rem(50px);
+            }
+        }
+    }
+
+    &__img {
+        @include media-breakpoint-down(lg) {
+            max-width: rem(90%);
+            margin-left: auto;
+        }
+
+        img {
+            @include media-breakpoint-down(lg) {
+                min-height: 550px;
+                object-position: left;
+            }
+        }
+    }
+
+    &__title {
+        @include text(36px, 44px, $white, 700);
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(lg) {
+            font-size: rem(56px);
+            line-height: rem(65px);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include text(70px, 80px);
+        }
+    }
+
+    &__desc {
+        @include text(18px, 24px, $white);
+        margin-top: rem(20px);
+
+    }
+
+    &-label {
+        position: relative;
+        padding: rem(20px 20px);
+        background-color: #FED032;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(-60px);
+            padding: rem(20px 50px);
+            max-width: 81%;
+            border-radius: 0 25px 25px 0;
+        }
+
+        @include media(1600px) {
+            padding: rem(60px 100px);
+            margin-top: rem(-100px);
+        }
+
+        &__list {
+            display: grid;
+            grid-gap: 30px;
+
+            @include media-breakpoint-up(sm) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include media-breakpoint-up(xl) {
+                grid-gap: 40px;
+            }
+
+            @include media(1600px) {
+                grid-gap: 58px;
+            }
+        }
+
+        &__item {
+            @include media-breakpoint-up(md) {
+                display: flex;
+                align-items: center;
+            }
+
+            @include media-breakpoint-down(lg) {
+                text-align: center;
+            }
+        }
+
+        &__text {
+            padding-left: rem(15px);
+            color: $tertiary;
+        }
+
+        &__icon {
+            @include media-breakpoint-down(md) {
+                width: rem(45px);
+                height: rem(45px);
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            @include media-breakpoint-up(xl) {
+                font-size: 25px;
+                line-height: 29px;
+            }
+        }
+
+        &__desc {
+            @include text(14px, 20px);
+            margin-top: rem(8px);
+
+            @include media-breakpoint-up(xl) {
+                @include text(20px, 36px);
+            }
+        }
+
+    }
+}

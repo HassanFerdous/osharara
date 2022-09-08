@@ -1,0 +1,24 @@
+//buttons
+@mixin addButton($px:10, $py:15, $width:null, $height:null,  $border:false, $borderColor:null, $r:false) {
+    padding: $px $py;
+
+    @if $height != null {
+        height: $height;
+    }@else {
+        height: $px + $py;
+    }
+
+    @if $width != null {
+        width: $width;
+    }
+    
+    @if $border{
+        border: rem(1px) solid $borderColor;
+    }@else {
+        border: rem(1px) solid transparent;
+    }
+
+    @if $r != null {
+        border-radius: rem(50px);
+    }
+}

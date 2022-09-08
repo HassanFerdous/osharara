@@ -1,0 +1,26 @@
+//functions
+@import './global/functions/rem';
+
+//mixins
+@import './global/variables';
+@import './global/mixins';
+@import './global/reset';
+@import './global/functions/utilizes';
+@import './global/base';
+@import './global/typography';
+@import './components/splide.scss';
+//lazy 
+@import './global/lazy';
+
+@import './global/swiper';
+
+// Components
+@import './components/buttons';
+@import './components/filterSelectric';
+@import './components/promotion';
+@import './components/header';
+@import './components/hero';
+@import './components/card';
+@import './components/footer';
+
+@import './pages/home'

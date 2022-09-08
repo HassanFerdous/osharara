@@ -1,0 +1,34 @@
+@import '../../../node_modules/swiper/swiper';
+@import '../../../node_modules/swiper/modules/lazy/lazy';
+@import '../../../node_modules/swiper/modules/scrollbar/scrollbar';
+
+.swiper {
+	&-button {
+		@include center(vertical);
+		padding: 0;
+		width: rem(54px);
+		height: rem(54px);
+		border: none;
+		z-index: 10;
+
+		&__prev {
+			left: rem(-1px);
+		}
+
+		&__next {
+			right: rem(-1px);
+		}
+	}
+
+	.swiper-scrollbar {
+		position: relative;
+		width: 100%;
+		left: 0;
+		height: rem(1px);
+		background-color: #c6d8e5;
+
+		&-drag {
+			background-color: $secondary;
+		}
+	}
+}

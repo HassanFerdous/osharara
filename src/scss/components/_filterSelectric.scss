@@ -1,0 +1,229 @@
+/* purgecss start ignore */
+$filter-selectric-main-color: $secondary !default; // Color used in border
+$filter-selectric-secondary-color: #bbb !default; // Color used in button
+$filter-selectric-text-color: $secondary !default; // Color used in label
+$filter-selectric-height: 54px !default; // Outer height
+$filter-selectric-spacing: 25px !default; // Label left padding
+$filter-selectric-border-width: 1px !default; // Outer border width
+$filter-selectric-inner-height: $filter-selectric-height - ($filter-selectric-border-width * 2) !default; // Inner height
+
+.filter-selectric {
+	&-wrapper {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&-responsive {
+		width: 100%;
+	}
+}
+
+.filter-selectric {
+	border: $filter-selectric-border-width dashed $filter-selectric-main-color;
+	position: relative;
+	border-radius: rem(50px);
+
+	.label {
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin: 0 $filter-selectric-inner-height 0 $filter-selectric-spacing;
+		font-size: $base-font-size;
+		line-height: $filter-selectric-inner-height;
+		color: $filter-selectric-text-color;
+		height: $filter-selectric-inner-height;
+		user-select: none;
+	}
+
+	.button {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: rem(44px);
+		height: $filter-selectric-inner-height;
+		color: $filter-selectric-secondary-color;
+		text-align: center;
+		text-indent: -9999px;
+
+		&:after {
+			@include center('both');
+			display: inline-block;
+			background: linear-gradient($secondary 0 0), linear-gradient($secondary 0 0);
+			background-position: center;
+			background-size: 50% 1px, 1px 50%;
+			background-repeat: no-repeat;
+			content: '';
+			width: rem(26px);
+			height: rem(26px);
+		}
+	}
+}
+
+.filter-selectric-focus .filter-selectric {
+	border-color: darken($filter-selectric-main-color, 20%);
+}
+
+.filter-selectric-hover .filter-selectric {
+	border-color: darken($filter-selectric-main-color, 10%);
+
+	.button {
+		color: darken($filter-selectric-secondary-color, 10%);
+
+		&:after {
+			border-top-color: darken($filter-selectric-secondary-color, 10%);
+		}
+	}
+}
+
+.filter-selectric-open {
+	z-index: 9999;
+
+	.filter-selectric {
+		border-radius: rem(27px 27px 0 0);
+		border-bottom: 0;
+
+		.button::after {
+			background-image: linear-gradient($secondary 0 0), linear-gradient($secondary 0 0);
+			background-size: 50% 1px;
+		}
+	}
+
+	.filter-selectric-items {
+		display: block;
+		border-top: 0;
+	}
+
+	&.filter-selectric-above {
+		.filter-selectric {
+			border-radius: rem(0 0 27px 27px);
+			border-top: 0;
+			border-bottom: 1px dashed $secondary;
+		}
+
+		.filter-selectric-items {
+			border-top: 1px dashed $secondary;
+			border-bottom: 0;
+		}
+	}
+}
+
+.filter-selectric-disabled {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	cursor: default;
+	user-select: none;
+}
+
+.filter-selectric-hide-select {
+	position: relative;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+
+	select {
+		position: absolute;
+		left: -100%;
+		display: none;
+	}
+}
+
+.filter-selectric-input {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	outline: none !important;
+	border: none !important;
+	*font: 0/0 a !important;
+	background: none !important;
+}
+
+.filter-selectric-temp-show {
+	position: absolute !important;
+	visibility: hidden !important;
+	display: block !important;
+}
+
+.filter-selectric-items {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: rem(0 25px 22px);
+	border: 1px dashed $secondary;
+	z-index: -1;
+	background-color: $white;
+	border-radius: rem(0 0 27px 27px);
+
+	.filter-selectric-scroll {
+		height: 100%;
+		overflow: auto;
+	}
+
+	.filter-selectric-above & {
+		top: auto;
+		bottom: 100%;
+		padding-top: rem(22px);
+		border-radius: rem(27px 27px 0 0);
+	}
+
+	ul,
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: $base-font-size;
+		line-height: rem(24px);
+		min-height: 20px;
+	}
+
+	li {
+		display: block;
+		color: $secondary;
+		cursor: pointer;
+
+		&:first-child {
+			display: none;
+		}
+
+		&.selected {
+			color: $secondary;
+		}
+	}
+
+	.disabled {
+		filter: alpha(opacity=50);
+		opacity: 0.5;
+		cursor: default !important;
+		background: none !important;
+		color: #666 !important;
+		user-select: none;
+	}
+
+	.filter-selectric-group {
+		.filter-selectric-group-label {
+			font-weight: bold;
+			padding-left: 10px;
+			cursor: default;
+			user-select: none;
+			background: none;
+			color: #444;
+		}
+
+		&.disabled li {
+			filter: alpha(opacity=100);
+			opacity: 1;
+		}
+
+		li {
+			padding-left: 25px;
+		}
+	}
+}

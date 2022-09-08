@@ -1,0 +1,81 @@
+.header {
+    padding: rem(20px 0 60px);
+
+
+
+}
+
+.navbar {
+    &__nav {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+
+        &-link{
+            @include text(18px, 20px, $white, 400);
+            text-transform: uppercase;
+            padding:rem(0 20px);
+
+            &:hover,
+            &:active {
+                text-decoration: underline;
+            }
+        };
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// &-toggler {
+//     width: rem(20px);
+//     height: rem(20px);
+
+//     &__bar {
+//         position: relative;
+//         display: inline-block;
+//         background-color: $secondary;
+//         width: rem(13px);
+//         height: rem(1px);
+
+//         &::after,
+//         &::before {
+//             position: absolute;
+//             content: '';
+//             top: rem(-3.5px);
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             background-color: $secondary;
+//             transition: transform .3s cubic-bezier(0, 1.18, .45, 1.18);
+//         }
+
+//         &::after {
+//             top: auto;
+//             bottom: rem(-4.5px);
+//         }
+//     }
+
+//     &--open &__bar {
+//         background-color: transparent;
+
+//         &::before {
+//             transform: rotate(45deg);
+//             top: 0;
+//         }
+
+//         &::after {
+//             bottom: 0;
+//             transform: rotate(-45deg);
+//         }
+//     }
+
+
+// }

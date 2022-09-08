@@ -1,0 +1,79 @@
+.btn {
+	@include text(12px, 24px, inherit, 700, 0.2em, $font-family-tertiary);
+	padding: rem(10px 20px);
+	height: rem(44px);
+	transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	text-align: center;
+
+	@include media-breakpoint-up(xl) {
+		padding: rem(16.5px 30px);
+		height: rem(60px);
+		font-size: $base-font-size-m;
+		line-height: 2;
+		letter-spacing:  0.3em;
+	}
+
+	&-round {
+		border-radius: rem(30px);
+	}
+
+	&-block {
+		display: block;
+		width: 100%;
+	}
+
+	&-outline {
+		&-primary {
+			@extend .btn-round;
+			color: $primary;
+			border: 1px solid $primary;
+
+			&:hover {
+				background-color: $primary;
+				color: $black;
+			}
+		}
+
+		&-secondary {
+			
+			color: $black;
+			border: 1px solid $black;
+			
+			&:hover {
+				background-color: $black;
+				color: $white;
+			}
+		}
+	}
+
+	&-solid{
+		&-primary {
+			background-color: $primary;
+			color: $black;
+
+			&:hover {
+				background-color: transparent;
+				color: $primary;
+				border-color: $primary;
+			}
+		}
+
+		&-secondary {
+			background-color: $secondary;
+			color: $white;
+			border-color: $secondary;
+
+			&:hover {
+				color: $secondary;
+				background-color: transparent;
+			}
+		}
+	}
+
+	&-link {
+		@include text(12px, 18px, $black, 700);
+		text-decoration: underline;
+	}
+}

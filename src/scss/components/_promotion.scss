@@ -1,0 +1,94 @@
+.promotion-bar {
+    position: relative;
+	background-color: #fee6d2;
+	min-height: 42px;
+	color: $secondary;
+
+	@include media-breakpoint-up(lg) {
+		min-height: 52px;
+	}
+
+	&--color {
+		&-1 {
+			background-color: $primary;
+			color: $white;
+		}
+
+		&-2 {
+			background-color: #fee6d2;
+			color: $primary;
+
+			svg {
+				path,
+                circle {
+					stroke: $primary;
+				}
+			}
+		}
+
+		&-3 {
+			background-color: $secondary;
+			color: $white;
+
+			svg {
+				path,
+                circle {
+					stroke: $white;
+				}
+			}
+		}
+
+		&-3 {
+			background-color: $blue-100;
+			color: $secondary;
+		}
+
+		&-4 {
+			background-color: $ecru-white;
+			color: $secondary;
+		}
+
+        &-3,
+        &-4 {
+            svg {
+				path,
+                circle {
+					stroke: $secondary;
+				}
+			}
+        }
+	}
+
+	&__inner {
+		padding: rem(12px 31px);
+		text-align: center;
+
+		@include media-breakpoint-up(lg) {
+			padding: rem(17px 40px);
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 50%;
+		right: rem(12px);
+        transform: translateY(-50%);
+		padding: 0;
+		background-color: transparent;
+		border: 0;
+
+        svg {
+            width: rem(19px);
+            height: rem(19px);
+            
+            @include media-breakpoint-up(lg) {
+                width: rem(22px);
+                height: rem(22px);
+            }
+        }
+	}
+}

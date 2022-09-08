@@ -1,0 +1,102 @@
+$white: #fff !default;
+$ecru-white: #faf3e6 !default;
+$black: #000 !default;
+$black-light: #163651 !default;
+//gray
+
+$gray-100: #f8f8f8 !default;
+$gray-200: #ececec !default;
+$gray-300: #ebebeb !default;
+$gray-400: #dcdcdc !default;
+$gray-500: #666666 !default;
+$gray-600: #0d0e0f !default;
+$gray-700: #494949 !default;
+$gray-800: #3d3d3d !default;
+$gray-900: #101011 !default;
+
+//green
+$green-300: #a6ce39 !default;
+$green-900: #577626 !default;
+
+//blue
+$blue-100: #d1dfe9 !default;
+$blue-900: #3336b8 !default;
+
+//organe 
+$orange-100 : #fad3b5 !default;
+$orange-900 : #ff5100 !default;
+
+// yellow
+$yellow: #FED032 !default;
+
+//theme color
+$successgreen: #78ec42 !default;
+
+$primary: $yellow;
+$secondary: $blue-900;
+$tertiary: $gray-900;
+
+$bodyText: $white;
+
+$border-primary: rem(1px) solid $primary;
+$outline-primary: rem(1px) solid $primary;
+
+//only colors
+$colors: (
+	'text-primary': $primary,
+	'text-secondary': $secondary,
+	'text-tertiary': $tertiary,
+	'text-white': $white,
+	'text-black': $black,
+) !default;
+
+$font-family-primary: 'Avert Demo', sans-serif !default;
+$font-family-secondary: 'Avant Garde', sans-serif !default;
+$font-family-tertiary: 'Roboto', sans-serif !default;
+
+$body-font: $font-family-primary;
+
+$base-font-size: rem(16px);
+$base-font-size-m: rem(14px);
+$base-line-height: normal;
+$base-letter-spacing: normal;
+
+$base-radius: rem(4px);
+
+$extra-large-font: 10rem !default;
+$extra-large-font-m: 4.5rem !default;
+$h1-font-size: 4.5rem !default;
+$h1-font-size-m: 2.625rem !default;
+$h2-font-size: 3.125rem !default;
+$h2-font-size-m: 1.625rem !default;
+$h4-font-size: 1.5rem !default;
+
+// theme breakpoint
+$media-break-points: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1440px,
+) !default;
+
+//space
+$space: (
+	'0': 0,
+	'1': rem(4px),
+	'2': rem(8px),
+	'3': rem(12px),
+	'4': rem(16px),
+	'5': rem(20px),
+	'6': rem(24px),
+	'7': rem(28px),
+	'8': rem(32px),
+	'9': rem(36px),
+	'10': rem(40px),
+	'11': rem(44px),
+	'12': rem(48px),
+	'13': rem(52px),
+	'14': rem(56px),
+	'15': rem(60px),
+) !default;

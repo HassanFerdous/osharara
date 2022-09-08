@@ -1,0 +1,58 @@
+.card {
+
+    &__body {
+        padding-top: rem(20px);
+    }
+
+    &-subtitle {
+        @include text(rem(13px), rem(30px), $primary, 700);
+
+        ul {
+            @extend .d-flex;
+        }
+
+        li {
+            position: relative;
+            padding: rem(0 10px);
+            text-transform: capitalize;
+
+            &:last-child::after {
+                display: none;
+            }
+            
+            &::after {
+                position: absolute;
+                right: -1px;
+                content: '|';
+
+            }
+        }
+
+    }
+
+    &__title {
+        @include text(rem(20px), rem(30px));
+        margin-top: rem(20px);
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    &__desc {
+        margin-top: rem(20px);
+        color: $white;
+    }
+
+    .btn {
+        margin-top: rem(30px);
+    }
+
+
+
+
+
+
+
+
+}
