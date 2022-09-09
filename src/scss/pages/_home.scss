@@ -109,8 +109,12 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding: rem(40px 40px);
+        padding: rem(20px);
         position: relative;
+
+        @include media-breakpoint-up(lg) {
+            padding: rem(20px 48px);
+        }
 
         &::after {
             content: '';
@@ -119,7 +123,7 @@
             bottom: 0;
             left: 0;
             position: absolute;
-            background-color: rgba(254, 208, 50, 0.7);
+            background-color: rgba(254, 208, 50, 0.9);
         }
 
         &-inner {
@@ -182,15 +186,15 @@
 
     &__thumb {
         position: relative;
-
         &-text {
             @include text(22px, 30px, $white, 700);
             position: absolute;
-            left: 20px;
-            bottom: 20px;
+            bottom: rem(20px);
+            padding: rem(0 20px);
 
             @include media-breakpoint-up(lg) {
                 @include text(34px, 52px);
+                padding: rem(0 48px);
             }
         }
 
