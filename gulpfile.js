@@ -23,7 +23,7 @@ const browserSync = require('browser-sync').create();
 /* Paths */
 const srcPath = 'src/';
 const distPath = 'build/';
-const extraPath = 'shopify/assets/'; /* this path chould be use wp or shopify */
+const extraPath = '';
 
 const config = {
 	shape: {
@@ -70,7 +70,6 @@ const path = {
 	clean: './' + distPath,
 };
 
-
 /* Tasks */
 
 function serve() {
@@ -78,7 +77,7 @@ function serve() {
 		server: {
 			baseDir: './' + distPath,
 			port: 3007,
-			ui: false
+			ui: false,
 		},
 	});
 }
@@ -140,7 +139,7 @@ function css(cb) {
 			.pipe(removeComments())
 			.pipe(rename('custom.min.css'))
 			.pipe(dest(path.build.css))
-			.pipe(dest(extraPath))
+
 			.pipe(browserSync.reload({ stream: true }))
 	);
 
@@ -168,7 +167,7 @@ function cssWatch(cb) {
 		)
 		.pipe(sourcemaps.write())
 		.pipe(rename('custom.min.css'))
-		.pipe(dest(extraPath))
+
 		.pipe(dest(path.build.css))
 		.pipe(browserSync.reload({ stream: true }));
 
@@ -178,7 +177,7 @@ function cssWatch(cb) {
 function fonts(cb) {
 	return src(path.src.fonts)
 		.pipe(dest(path.build.fonts))
-		.pipe(dest('shopify/assets/'))
+
 		.pipe(browserSync.reload({ stream: true }));
 	cb();
 }
@@ -216,7 +215,7 @@ function js(cb) {
 				},
 			})
 		)
-		.pipe(dest(extraPath))
+
 		.pipe(dest(path.build.js))
 		.pipe(browserSync.reload({ stream: true }));
 
@@ -244,7 +243,7 @@ function jsWatch(cb) {
 				},
 			})
 		)
-		.pipe(dest(extraPath))
+
 		.pipe(dest(path.build.js))
 		.pipe(browserSync.reload({ stream: true }));
 
@@ -289,9 +288,10 @@ function copyShapes(cb) {
 }
 
 function copyViewSVG() {
-	return gulp.src('./build/assets/svgs/symbol/svg/sprite.symbol.svg', { allowEmpty: true })
-			.pipe(rename('spritesvg.html'))
-			.pipe(gulp.dest('./src/views/partials/'));
+	return gulp
+		.src('./build/assets/svgs/symbol/svg/sprite.symbol.svg', { allowEmpty: true })
+		.pipe(rename('spritesvg.html'))
+		.pipe(gulp.dest('./src/views/partials/', { allowEmpty: true }));
 }
 
 function watchFiles() {
@@ -305,7 +305,16 @@ function watchFiles() {
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, buildSvg, copyShapes, copyViewSVG));
-const watch = gulp.parallel(html, css, js, images, fonts, gulp.series(buildSvg, copyShapes, copyViewSVG),watchFiles, serve);
+const watch = gulp.parallel(
+	html,
+	css,
+	js,
+	images,
+	fonts,
+	gulp.series(buildSvg, copyShapes, copyViewSVG),
+	watchFiles,
+	serve
+);
 
 /* Exports Tasks */
 exports.html = html;
