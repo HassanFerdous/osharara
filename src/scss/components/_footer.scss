@@ -130,6 +130,8 @@
     }
 
     .social {
+        font-size: 0;
+        line-height: 0;
         display: flex;
         justify-content: center;
 
@@ -139,6 +141,10 @@
 
         &__link {
             margin-right: 25px;
+
+            &:hover {
+                color: $primary;
+            }
         }
     }
 
