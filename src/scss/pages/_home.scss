@@ -43,6 +43,11 @@
     &__marquee {
         width: 100%;
         display: inline-block;
+        margin-bottom: rem(60px);
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(110px);
+        }        
 
         &-title {
             display: inline-flex;
