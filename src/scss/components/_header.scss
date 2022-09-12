@@ -1,81 +1,142 @@
 .header {
-    padding: rem(20px 0 60px);
+    height: rem(64px);
 
+    @include media-breakpoint-up(lg) {
+        height: rem(100px);
+    }
 
+    &__stickyWrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        padding: rem(10px 0);
+        z-index: 999;
+        transition: all .3s ease;
 
+        @include media-breakpoint-up(lg) {
+            padding: rem(20px 0);
+            height: 100px;
+        }
+
+        .container {
+            height: 100%;
+        }
+
+        .navbar {
+            height: 100%;
+        }
+    }
+
+    &-sticky &__stickyWrap, body.nav-open &__stickyWrap{
+        background-color: rgba(22, 54, 81, 1);
+    }
 }
 
 .navbar {
     &__nav {
-        display: flex;
-        justify-content: end;
         width: 100%;
 
-        &-link{
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            justify-content: end;
+        }
+
+        @include media-breakpoint-down(lg) {
+            // display: none;
+            position: absolute;
+            left: 0;
+            top: 64px;
+            z-index: 999;
+            width: 100%;
+            height: calc(100vh - 64px);
+            background-color: $black-light;
+            padding: rem(20px 16px 0);
+            transform: translateX(-100%);
+            transition: transform .3s ease;
+        }
+
+        &.show {
+            transform: translateX(0);
+        }
+
+        &-item {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: rem(10px);
+            }
+        }
+
+        &-link {
             @include text(18px, 20px, $white, 400);
             text-transform: uppercase;
-            padding:rem(0 20px);
+            padding: rem(8px 0);
+
+            @include media-breakpoint-up(lg) {
+                padding: rem(0 20px);
+            }
 
             &:hover,
             &:active {
                 text-decoration: underline;
             }
-        };
+        }
+
+        ;
+    }
+
+
+
+    &-toggler {
+        width: rem(30px);
+        height: rem(30px);
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+
+        &__bar {
+            position: relative;
+            display: block;
+            background-color: $yellow;
+            width: rem(240px);
+            height: rem(2px);
+
+            &::after,
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $yellow;
+                transition: transform .3s cubic-bezier(0, 1.18, .45, 1.18);
+            }
+
+
+
+            &::before {
+                top: rem(-6.5px);
+            }
+
+            &::after {
+                top: rem(6px);
+            }
+
+        }
+
+        &--open &__bar {
+            background-color: transparent;
+
+            &::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-// &-toggler {
-//     width: rem(20px);
-//     height: rem(20px);
-
-//     &__bar {
-//         position: relative;
-//         display: inline-block;
-//         background-color: $secondary;
-//         width: rem(13px);
-//         height: rem(1px);
-
-//         &::after,
-//         &::before {
-//             position: absolute;
-//             content: '';
-//             top: rem(-3.5px);
-//             left: 0;
-//             width: 100%;
-//             height: 100%;
-//             background-color: $secondary;
-//             transition: transform .3s cubic-bezier(0, 1.18, .45, 1.18);
-//         }
-
-//         &::after {
-//             top: auto;
-//             bottom: rem(-4.5px);
-//         }
-//     }
-
-//     &--open &__bar {
-//         background-color: transparent;
-
-//         &::before {
-//             transform: rotate(45deg);
-//             top: 0;
-//         }
-
-//         &::after {
-//             bottom: 0;
-//             transform: rotate(-45deg);
-//         }
-//     }
-
-
-// }

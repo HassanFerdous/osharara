@@ -1,7 +1,11 @@
 import marquee from 'vanilla-marquee';
 import Splide from '@splidejs/splide';
+import Header from './modules/header';
 
 window.addEventListener('DOMContentLoaded', () => {
+	//header
+	new Header();
+
 	//init course marquee;
 	let marquees = [...document.querySelectorAll('.marquee')];
 	let courseCarousel = document.querySelector('#upcomingCourseSlider');
