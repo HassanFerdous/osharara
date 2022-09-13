@@ -8,6 +8,10 @@
 @import './global/functions/utilizes';
 @import './global/base';
 @import './global/typography';
+@import './global/form';
+
+
+
 @import './components/splide.scss';
 //lazy 
 @import './global/lazy';
@@ -25,4 +29,5 @@
 
 // pages
 @import './pages/home';
-@import './pages/course-detail'
+@import './pages/course-detail';
+@import './pages/login';

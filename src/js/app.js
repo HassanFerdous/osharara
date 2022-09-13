@@ -63,7 +63,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		perPage:4,
 		type: 'loop',
 		gap: 20,
+		arrows     : false,
 		pagination: false,
+		isNavigation: true,
 	});
 
 	main.sync(thumbnails);

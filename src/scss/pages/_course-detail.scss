@@ -1,0 +1,248 @@
+.hero-carousel {
+    padding:rem(30px 16px);
+    &__text {
+        max-width: rem(1440px);
+        margin-top: rem(50px);
+
+        .btn {
+            margin-top: rem(20px);
+            @include media-breakpoint-up(lg) {
+                margin-top: rem(58px);
+                
+            }
+        }
+    }
+
+    &__desc {
+        margin-top: rem(15px);
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(24px);
+            
+        }
+    }
+
+    &__img {
+        margin-top: rem(90px);
+    }
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.thumbnail-slider {
+    visibility: visible !important;
+    overflow: hidden;
+    margin-top: 30px;
+
+    .splide__list {
+        justify-content: space-between;
+
+    }
+}
+
+
+.details {
+    margin-top: 50px;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 134px;
+
+    }
+
+    &__list {
+        justify-content: space-between;
+        padding: rem(40px 30px);
+        background-color: $yellow;
+        border-radius: rem(52px);
+
+        @include media-breakpoint-up(lg) {
+            padding: rem(92px 100px 68px);
+
+        }
+    }
+
+    &__item {
+        max-width: 100%;
+        margin-top: rem(30px);
+        padding: rem(0 20px);
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            max-width: rem(417px);
+            margin-top: 0;
+
+        }
+
+    }
+
+    &__title {
+        margin-top: rem(23px);
+        color: $black-900;
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(32px);
+
+        }
+    }
+
+    &__desc {
+        color: $black-900;
+        margin-top: rem(18px);
+
+        @include media-breakpoint-up(lg) {
+            line-height: rem(36px);
+
+        }
+    }
+
+    &-info {
+        max-width: rem(1096px);
+        margin: 0 auto;
+        padding-top: rem(50px);
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: rem(143px);
+
+        }
+
+        &__desc {
+            margin-top: 15px;
+
+            @include media-breakpoint-up(lg) {
+                line-height: 36px;
+                margin-top: 20px;
+
+            }
+        }
+
+        .btn {
+            margin-top: 40px;
+        }
+    }
+}
+
+// Author
+.author {
+    margin-top: rem(50px);
+
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(165px);
+
+    }
+
+    &__inner {
+        grid-template-columns: 48.587223587% 43.304668305%;
+        grid-gap: rem(20px);
+    }
+
+    &__text {
+        margin-top: rem(30px);
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+
+        }
+    }
+
+    &__desc {
+        margin-top: rem(15px);
+
+        @include media-breakpoint-up(lg) {
+            line-height: rem(36px);
+            margin-top: rem(20px);
+
+        }
+    }
+}
+
+// Structure 
+.structure {
+    margin-top: rem(50px);
+    margin-bottom: rem(50px);
+
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(160px);
+        margin-bottom: rem(144px);
+
+    }
+
+    &__inner {
+        margin-top: rem(102px);
+
+    }
+
+    &__item {
+        padding: rem(0 10px);
+        margin-top: 30px;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            max-width: rem(462px);
+            margin-top: 0;
+
+        }
+    }
+
+    &__title {
+        margin-top: rem(40px);
+
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(62px);
+
+        }
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(32px);
+            
+        }
+    }
+
+    &__desc {
+        @include media-breakpoint-up(lg) {
+            line-height: rem(36px);
+
+        }
+    }
+}
+
+// Certified
+.certified {
+    margin-top: rem(50px);
+  
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(160px);
+        margin-bottom: rem(30px);
+        
+    }
+
+    &__inner {
+        grid-template-columns: 43.304668305% 48.587223587%;
+        grid-gap: rem(20px);
+        margin-top: rem(40px);
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(100px);
+            
+        }
+    }
+    &__text{
+        margin-bottom: 30px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+            
+        }
+
+    }
+
+    &__desc {
+        margin-top: rem(20px);
+
+        @include media-breakpoint-up(lg) {
+            line-height: rem(36px);
+
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.form{
+    &__row{
+       
+    }
+    &__control{
+        width:100%;
+        font-size: rem(30px);
+        line-height: rem(35px);
+        color: $black;
+        font-weight: 700;
+        border:none;
+        background-color: transparent!important;
+        margin-top: rem(20px);
+        padding:rem(12px 0);
+        border-bottom: 1.5px solid $black;
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(47px);
+            padding:rem(34px 0);
+            
+        }
+     
+
+    }
+    @include placeholder {
+        font-size: rem(30px);
+        line-height: rem(35px);
+        color: $black;
+        font-weight: 700;
+
+    }
+}

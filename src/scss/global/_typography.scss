@@ -43,6 +43,17 @@ h2,
 	}
 }
 
+h3,
+.h3 {
+	font-size: $h2-font-size-m;
+
+	@include media-breakpoint-up(lg) {
+		font-size: $h3-font-size;
+		line-height: rem(80px);
+	}
+
+}
+
 h4,
 .h4,
 .sub-title {
