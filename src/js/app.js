@@ -48,4 +48,25 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 		upcomingCourseSlider.mount();
 	}
+
+	// course details hero carousel
+	var main = new Splide('#hero-carousel', {
+
+		perPage:1,
+		type: 'loop',
+		gap: 20,
+		arrows     : false,
+		pagination: false,
+	});
+
+	var thumbnails = new Splide('#thumbnail-slider', {
+		perPage:4,
+		type: 'loop',
+		gap: 20,
+		pagination: false,
+	});
+
+	main.sync(thumbnails);
+	main.mount();
+	thumbnails.mount();
 });

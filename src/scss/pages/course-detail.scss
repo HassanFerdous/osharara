@@ -1,0 +1,49 @@
+
+
+.hero-carousel{
+    &__text{
+        max-width: rem(1440px);
+        margin-top: 50px;
+        .btn{
+            margin-top:rem(58px);
+        }
+    }
+    &__title{
+        font-size: rem(70px);
+        line-height: rem(80px);
+    }
+    &__desc{
+        margin-top: 24px;
+    }
+    &__img{
+        margin-top: rem(90px);
+    }
+}
+
+
+.thumbnail-slider{
+    visibility: visible!important;
+    margin-top: 30px;
+    .splide__list{
+        justify-content: space-between;
+    
+    }
+}
+
+
+.details{
+    margin-top: 134px;
+    &__list{
+        justify-content: space-between;
+        padding: rem(92px 100px 68px);
+        background-color: $yellow;
+        border-radius: rem(52px);
+    }
+
+    &__item{
+        max-width: rem(417px);
+        padding: rem(0 20px);
+      
+        text-align: center;
+    }
+}
