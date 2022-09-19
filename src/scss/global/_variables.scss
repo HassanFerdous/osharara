@@ -1,6 +1,7 @@
 $white: #fff !default;
 $ecru-white: #faf3e6 !default;
 $black: #000 !default;
+$black-900: #2C2B2B !default;
 $black-light: #163651 !default;
 //gray
 
@@ -65,10 +66,12 @@ $base-radius: rem(4px);
 
 $extra-large-font: 10rem !default;
 $extra-large-font-m: 4.5rem !default;
-$h1-font-size: 4.5rem !default;
-$h1-font-size-m: 2.625rem !default;
-$h2-font-size: 3.125rem !default;
-$h2-font-size-m: 1.625rem !default;
+$h1-font-size:4.375rem !default;
+$h1-font-size-m: 2.25rem !default;
+$h2-font-size: 4.375rem !default;
+$h2-font-size-m: 2rem !default;
+$h3-font-size: 3.125rem !default;
+$h3-font-size-m: 1.625rem !default;
 $h4-font-size: 1.5rem !default;
 
 // theme breakpoint

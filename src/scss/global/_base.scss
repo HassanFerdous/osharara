@@ -85,8 +85,8 @@ strong {
 	margin-right: auto;
 	width: 100%;
 	max-width: 1920px;
-	
-	> svg {
+
+	>svg {
 		display: none;
 	}
 }
@@ -132,6 +132,11 @@ strong {
 
 	&-between {
 		justify-content: space-between;
+	}
+
+	&-end {
+		justify-content: end;
+
 	}
 }
 

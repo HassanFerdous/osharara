@@ -36,11 +36,23 @@ h1,
 h2,
 .h2 {
 	font-size: $h2-font-size-m;
+	text-transform: uppercase;
 
 	@include media-breakpoint-up(lg) {
 		font-size: $h2-font-size;
 		line-height: rem(80px);
 	}
+}
+
+h3,
+.h3 {
+	font-size: $h2-font-size-m;
+
+	@include media-breakpoint-up(lg) {
+		font-size: $h3-font-size;
+		line-height: rem(80px);
+	}
+
 }
 
 h4,

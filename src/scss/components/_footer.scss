@@ -1,7 +1,12 @@
 .footer {
     @include text(rem(18px), rem(30px));
-    margin-top: rem(100px);
+    margin-top: rem(50px);
     color: $white;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: rem(100px);
+
+    }
 
     a:hover {
         text-decoration: underline;

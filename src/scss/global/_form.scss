@@ -1,0 +1,47 @@
+.form {
+
+    &__control {
+        @include placeholder {
+            font-size: rem(30px);
+            line-height: rem(35px);
+            color: $black;
+            font-weight: 700;
+    
+        }
+
+        width: 100%;
+        font-size: rem(30px);
+        line-height: rem(35px);
+        color: $black;
+        font-weight: 700;
+        border: none;
+        background-color: transparent !important;
+        margin-top: rem(20px);
+        padding: rem(12px 0);
+        border-bottom: 1.5px solid $black;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(47px);
+            padding: rem(34px 0);
+        }
+    }
+
+    &__error {
+        position: absolute;
+        left: 0;
+        font-size: 16px;
+        color: red;
+        display: none;
+    }
+
+    &__row {
+        position: relative;
+
+        &.error {
+            .form__error {
+                display: block;
+                color: red;
+            }
+        }
+    }
+}

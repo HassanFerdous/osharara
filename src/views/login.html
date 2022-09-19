@@ -1,0 +1,82 @@
+---
+layout: default
+title: OSHARA | Login Register
+---
+<section class="d-flex align-items-center justify-content-center flex-column useraction">
+    <div class="useraction__inner">
+        <div class="container">
+
+            <!-- Begin login -->
+            <div class="useraction__body login" id="login">
+                <div class="useraction__content">
+                    <h2 class="text-uppercase useraction__title">Login</h2>
+                    <a href="#" class="d-flex align-items-center justify-content-center text-uppercase  btn btn-outline-secondary "><img
+                            src="./assets/static-svgs/google.svg" alt="">Continue With Google</a>
+
+                    <form class="form" action="#" id="login-form">
+                        <div class="form__row">
+                            <input type="email" class="form__control" placeholder="Email" autocomplete="off">
+                            <p class="form__error">Please enter valid email</p>;
+                        </div>
+                        <div class="form__row">
+                            <input type="password" class="form__control form__passaword" placeholder="password" autocomplete="off">
+                            <p class="form__error">Please enter password</p>;
+                        </div>
+                        <div class="form__row">
+                            <a href="#forgot" class="forgot-password js-showhide">Forgot your password?</a>
+                        </div>
+                        <div class="form__row">
+                            <button class="btn  btn-block btn-solid-primary js-submit" type="submit">Login </button>
+                        </div>
+                        <p class="useraction__desc text-center">Don’t have a Semrush account? <a href="#register" class="js-showhide">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <!-- ./End login -->
+
+            <!-- Begin login -->
+            <div class="useraction__body forgot" id="forgot">
+                <div class="useraction__content">
+                    <h2 class="text-uppercase useraction__title">Reset your password</h2>
+
+                    <form class="form" action="#">
+                        <div class="form__row">
+                            <input type="email" class="form__control" placeholder="Enter your email address" autocomplete="off">
+                            <p class="form__error">Please enter valid email</p>;
+                        </div>
+                        <div class="form__row">
+                            <button class="btn  btn-block btn-solid-primary js-submit" type="submit">Submit</button>
+                        </div>
+                        <p class="useraction__desc text-center"><a href="#register" class="js-showhide">Cancel</a></p>
+                    </form>
+                </div>
+            </div>
+            <!-- ./End login -->
+
+            <!-- Finish Register -->
+            <div class="useraction__body register" id="register">
+                <div class="useraction__content">
+                    <h2 class="text-uppercase useraction__title">Create your account</h2>
+                    <a href="#" class="d-flex align-items-center justify-content-center text-uppercase  btn btn-outline-secondary "><img
+                            src="./assets/static-svgs/google.svg" alt="">Continue With Google</a>
+
+                    <form class="form" action="#" id="register-form">
+                        <div class="form__row">
+                            <input type="email" class="form__control" placeholder="Email">
+                        </div>
+                        <div class="form__row">
+                            <input type="password" class="form__control form__passaword" placeholder="password" required="">
+                        </div>
+                        <div class="form__row">
+                            <button class="btn  btn-block btn-solid-primary" type="submit">Register</button>
+                        </div>
+                        <p class="useraction__desc text-center">Don’t have a Semrush account? <a href="#login" class="js-showhide">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <!-- ./End register -->
+        </div>
+    </div>
+</section>
