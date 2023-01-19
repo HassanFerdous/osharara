@@ -1,4 +1,7 @@
 .hero {
+    position: relative;
+    z-index: 1;
+
     .container {
         @include media-breakpoint-down(lg) {
             padding: 0;
@@ -34,6 +37,15 @@
                 margin-top: rem(50px);
             }
         }
+
+        &--mobi {
+            @include media-breakpoint-down(lg) {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: translate(0, 0);
+            }
+        }
     }
 
     &__img {
@@ -47,6 +59,44 @@
                 min-height: 550px;
                 object-position: left;
             }
+        }
+
+
+        &--sm {
+
+            @include media-breakpoint-down(lg) {
+                width: 80%;
+                margin: auto;
+            }
+
+            img {
+                display: block;
+
+                @include media-breakpoint-down(lg) {
+                    min-height: auto;
+                    object-positon: contain;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    margin-left: auto;
+                }
+            }
+        }
+
+
+    }
+
+    &__subtitle {
+        font-family: $font-family-primary;
+        font-size: rem(33.8568px);
+        line-height: rem(47px);
+        font-weight: 500;
+        font-family: $font-family-tertiary;
+        color: $yellow;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(16px);
         }
     }
 
@@ -148,5 +198,13 @@
             }
         }
 
+    }
+
+    &__pettern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
     }
 }

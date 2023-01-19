@@ -152,7 +152,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				);
 		};
 
-		if ( document.querySelector( $formId ) ) {
+		if (document.querySelector($formId)) {
 			document.querySelector($formId).addEventListener('submit', (event) => {
 				event.preventDefault();
 				let form = event.target,
@@ -180,4 +180,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	formValidation('#login-form');
 	formValidation('#register-form');
+
+	document.querySelector('.tracking__input--copy').addEventListener('click', copyToClipboard);
+	document.querySelector('.js-copy-url').addEventListener('click', copyToClipboard);
+
+ 	async function copyToClipboard(event) {
+		event.preventDefault();
+
+		let input = document.querySelector('.tracking__input--copy');
+		// Select the text field
+		input.select();
+		input.setSelectionRange(0, 99999); // For mobile devices
+
+		console.log(input.value)
+
+		// Copy the text inside the text field
+		await navigator.clipboard.writeText(input.value);
+
+		// Alert the copied text
+		alert('Campaign URL has been copied to your clipboard.');
+	}
 });
