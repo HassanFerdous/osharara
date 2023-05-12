@@ -6,7 +6,7 @@
     }
 
     &__stickyWrap {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -27,10 +27,6 @@
         .navbar {
             height: 100%;
         }
-    }
-
-    &-sticky &__stickyWrap, body.nav-open &__stickyWrap{
-        background-color: rgba(22, 54, 81, 1);
     }
 }
 
@@ -82,7 +78,30 @@
             }
         }
 
-        ;
+
+        &-qoute {
+            width: 177px;
+            height: 177px;
+            border-radius: 50%;
+            border: 1px solid $primary;
+            background-color: $primary;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            font-family: $font-family-primary;
+            color: #0f0e0e;
+
+            @include media-breakpoint-down(lg) {
+                display: none
+            }
+
+            &:hover {
+                background-color: $white;
+            }
+
+        }
+
+
     }
 
 
