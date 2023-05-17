@@ -1,0 +1,138 @@
+/* emma added css */
+// .submit {
+//     padding: 3%;
+//     background-color: #FED032;
+//     border-radius: 10em;
+//     height: 125px;
+//     width: 125px;
+// }
+
+.adword_checkbox {
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+
+
+    &+label {
+        position: relative;
+        cursor: pointer;
+        padding-left: rem(36px);
+        user-select: none;
+        margin-bottom: rem(12px);
+        line-height: rem(27px);
+
+        &::before {
+            position: absolute;
+            top: rem(3px);
+            left: 0;
+            content: '';
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 2px solid $primary;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+            padding: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 5px;
+            border-radius: 2px;
+        }
+    }
+
+    &:checked+label {
+        &::before {
+            background-color: $primary;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 9px;
+            width: 6px;
+            height: 14px;
+            border: solid $white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+
+.adWord_simulator_container {
+    padding: rem(40px 66px);
+    background: $white;
+    border: rem(23px) solid $blue-900;
+    border-radius: rem(37px);
+    margin-top: rem(-40px);
+}
+
+
+.site_link_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(20px 12px);
+
+}
+
+.site_link_grid_item {
+    // margin: 0 0 0 4em;
+    text-align: center;
+}
+
+.site_link_item_title {
+    color: $secondary;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.25em;
+    margin-bottom: rem(12px);
+}
+
+.site_link_item_description {
+    color: black;
+    // text-align: left;
+}
+
+.adWordContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.adWord_content_item {
+    margin: 0 0 rem(16px);
+}
+
+.adWord_title {
+    color: black;
+    grid-row-start: 0;
+    grid-column-start: 0;
+    grid-column-end: 2;
+    font-size: 0.75em;
+
+}
+
+.description_result {
+    color: #000;
+}
+
+.adWord_headline_container {
+    grid-row-start: 2;
+}
+
+.adWord_title>* {
+    font-size: 1.3em;
+    color: black;
+}
+
+.ad_logo {
+    font-weight: bolder;
+}
+
+.adWord_headline_container>* {
+    color: $secondary;
+    font-weight: bold;
+    font-size: 1.75em;
+}

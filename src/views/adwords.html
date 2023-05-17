@@ -1,0 +1,372 @@
+---
+layout: default
+title: OSHARA | Tracking
+---
+
+<!-- Begin hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero__grid align-items-center">
+            <div class="hero__text hero__text--mobi">
+                <h6 class="hero__subtitle">Free tool for creating</h6>
+                <h1 class="hero__title">tracking URLs for marketing campaigns</h1>
+                <p class="hero__desc">Use custom campaign tracking URLs for ad campaigns in Google Ads, on LinkedIn, and for content syndication on other
+                    websites.</p>
+            </div>
+
+            <picture class="hero__img hero__img--sm">
+                <source media="(min-width: 576px)" srcset="./assets/static-svgs/Illustration.svg">
+                <source media="(min-width: 320px)" srcset="./assets/static-svgs/Illustration.svg">
+                <img src="./assets/static-svgs/Illustration.svg" alt="" width="640" height="635">
+            </picture>
+        </div>
+    </div>
+    <picture class="hero__pettern">
+        <source media="(min-width: 576px)" srcset="./assets/static-svgs/bg-partern.svg">
+        <source media="(min-width: 320px)" srcset="./assets/static-svgs/bg-partern.svg">
+        <img src="./assets/static-svgs/bg-partern.svg" alt="">
+    </picture>
+</section>
+<!-- ./End hero  -->
+
+<!-- Begin tracking -->
+<section class="tracking">
+    <div class="tracking-preview">
+        <h3 class="text-center text-uppercase tracking-preview__head">AdWord Prévisualisé</h3>
+        <div class="adWord_simulator_container">
+            <div class="adWordContent">
+                <!-- span for ad sign, url and phone number  -->
+                <span class="adWord_title adWord_content_item">
+                    <span class="ad_logo">Ad</span>
+                    <span class="bullet"> • </span>
+                    <span id="first_part_url_result" class="url_result">www.example.com</span><span class="slash url_result">/</span><span
+                        id="second_part_url_result" class="url_result">path-1</span><span class="slash url_result">/</span><span id="third_part_url_result"
+                        class="url_result">path-2</span>
+                    <span class="phone_number_separator"> ⋮ </span>
+                    <span id="phone_number_result"></span>
+                </span>
+                <!-- span for headlines -->
+                <span class="adWord_headline_container adWord_content_item">
+                    <span id="first_headline_result" class="headline_result">Titre 1</span> <span class="separator_headline"> | </span> <span
+                        id="second_headline_result" class="headline_result">Titre 2</span>
+                </span>
+                <!-- span for description -->
+                <span id="description_result" class="description_result adWord_content_item">Description of the main website.
+                    <span id="first_callout_result"></span> <span id="second_callout_result"></span> <span id="third_callout_result"></span> <span
+                        id="fourth_callout_result"></span>
+                </span>
+
+                <p id="location_result"></p>
+            </div>
+
+            <div class="site_link_grid">
+                <!-- first sitelink -->
+                <div class="site_link_grid_item">
+                    <p id="first_site_link_result" class="site_link_item_title">Lien 1</p>
+                    <p id="first_site_link_result_description_result" class="site_link_item_description"> Example of a description for siteline 1.</p>
+                </div>
+
+                <!-- second sitelink -->
+                <div class="site_link_grid_item">
+                    <p id="second_site_link_result" class="site_link_item_title">Lien 2</p>
+                    <p id="second_site_link_result_description_result" class="site_link_item_description">Example of a description for siteline 2.</p>
+                </div>
+
+                <!-- third sitelink -->
+                <div class="site_link_grid_item">
+                    <p id="third_site_link_result" class="site_link_item_title">Lien 3</p>
+                    <p id="third_site_link_result_description_result" class="site_link_item_description">Example of a description for siteline 3.</p>
+                </div>
+
+                <!-- four sitelink -->
+                <div class="site_link_grid_item">
+                    <p id="fourth_site_link_result" class="site_link_item_title">Lien 4</p>
+                    <p id="fourth_site_link_result_description_result" class="site_link_item_description">Example of a description for siteline 4.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tracking__form">
+            <form method="post" action="https://dev1.servicesdev.com/fr/adwords-simulator" id="ads-form" novalidate="novalidate">
+                <!-- <input type="hidden" name="_token" value="7pzMienl1so7YUtRKVgFtVwt6xtZaSTZKVHZpAAl"> -->
+
+
+                <div class="input__row input__row--full">
+                    <!-- Final URL -->
+                    <label for="final_url">URL Finale</label>
+                    <input type="text" name="final_url" id="final_url" maxlength="30" placeholder="www.example.qc.ca"
+                        class="tracking__input tracking__input--search on_change" style="text-transform: none;">
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <!-- display url -->
+                    <label for="display_url">URL à afficher</label>
+
+                    <div class="input-row__grid">
+                        <div class="input__column">
+                            <input type="text" name="first_url_input" id="first_url_input" maxlength="30" placeholder="www.example.com"
+                                class="tracking__input tracking__input--search on_change" style="text-transform: none;">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="second_url_input" id="second_url_input" placeholder="path-1"
+                            class="tracking__input tracking__input--search on_change" style="text-transform: none;">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="third_url_input" id="third_url_input" placeholder="path-2"
+                            class="tracking__input tracking__input--search on_change" style="text-transform: none;">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="first_headline" id="first_headline" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 1">
+                            <!-- length of the input -->
+                            <span class="validity_input_length"> </span>
+                        </div>
+
+                        <div class="input__column">
+                           <input type="text" name="second_headline" id="second_headline" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 2">
+                        </div>
+
+                        <div class="input__column">
+                           <input type="text" name="third_headline_title" id="third_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 3">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="fourth_headline_title" id="fourth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 4">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="fifth_headline_title" id="fifth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 5">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="sixth_headline_title" id="sixth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 6">
+                        </div>
+                        
+                        <div class="input__column">
+                            <input type="text" name="seventh_headline_title" id="seventh_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 7">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="seventh_headline_title" id="seventh_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" 
+                            placeholder="Titre 8">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="ninth_headline_title" id="ninth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;"
+                            placeholder="Titre 9">
+                        </div>
+
+                        <div class="input__column">
+                           <input type="text" name="tenth_headline_title" id="tenth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" 
+                            placeholder="Titre 10">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="eleventh_headline_title" id="eleventh_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" 
+                            placeholder="Titre 11">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="twelfth_headline_title" id="twelfth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 12">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="thirteenth_headline_title" id="thirteenth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" placeholder="Titre 13">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="fourteenth_headline_title" id="fourteenth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" 
+                            placeholder="Titre 14">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="fifteenth_headline_title" id="fifteenth_headline_title" maxlength="30"
+                            class="tracking__input tracking__input--search on_change headline" style="text-transform: none;" 
+                            placeholder="Titre 15">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <label for="description_input">Description</label>
+                    <input type="text" name="description_input" id="description_input" maxlength="90"
+                            class="tracking__input tracking__input--search on_change description" style="text-transform: none;">
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <label for="callout">Callouts</label>
+
+                    <div class="input-row__grid input-row__grid--4">
+                        <div class="input__column">
+                            <input type="text" name="first_callout" id="first_callout_input" maxlength="25" placeholder="Callout 1"
+                            class="tracking__input tracking__input--search callout" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="second_callout" id="second_callout_input" maxlength="25" placeholder="Callout 2"
+                            class="tracking__input tracking__input--search callout" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="third_callout" id="third_callout_input" maxlength="25" placeholder="Callout 3"
+                            class="tracking__input tracking__input--search callout" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="fourth_callout" id="fourth_callout_input" maxlength="25" placeholder="Callout 4"
+                            class="tracking__input tracking__input--search callout" style="text-transform: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <label for="first_sitelink_title">Lien 1</label><br>
+
+                    <div class="input-row__grid input-row__grid--4">
+                        <div class="input__column">
+                            <input type="text" name="first_sitelink_text_input" id="first_sitelink_text_input" maxlength="25" placeholder="Exemple"
+                            class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="first_sitelink_description_1_input" id="first_sitelink_description_1_input" maxlength="35"
+                            placeholder="Description 1" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="first_sitelink_description_2_input" id="first_sitelink_description_2_input" maxlength="35"
+                            placeholder="Description 2" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="first_sitelink_final_url_input" id="first_sitelink_final_url_input" maxlength="25" placeholder="URL Finale"
+                            class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <label for="second_sitelink_title">Lien 2</label>
+
+                    <div class="input-row__grid input-row__grid--4">
+                        <div class="input__column">
+                            <input type="text" name="second_sitelink_text_input" id="second_sitelink_text_input" maxlength="25" placeholder="Exemple"
+                                class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="second_sitelink_description_1_input" id="second_sitelink_description_1_input" maxlength="35"
+                                placeholder="Description 1" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="second_sitelink_description_2_input" id="second_sitelink_description_2_input" maxlength="35"
+                                placeholder="Description 2" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="second_sitelink_final_url_input" id="second_sitelink_final_url_input" maxlength="25" placeholder="URL Finale"
+                                class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <label for="third_sitelink_title">Lien 3</label>
+
+                    <div class="input-row__grid input-row__grid--4">
+                        <div class="input__column">
+                            <input type="text" name="third_sitelink_text_input" id="third_sitelink_text_input" maxlength="25" placeholder="Exemple"
+                                class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+
+                        <div class="input__column">
+                            <input type="text" name="third_sitelink_description_1_input" id="third_sitelink_description_1_input" maxlength="35"
+                                placeholder="Description 1" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="third_sitelink_description_2_input" id="third_sitelink_description_2_input" maxlength="35"
+                                placeholder="Description 2" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="third_sitelink_final_url_input" id="third_sitelink_final_url_input" maxlength="25" placeholder="URL Finale"
+                                class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <label for="fourth_sitelink_title">Lien 4</label>
+
+                    <div class="input-row__grid input-row__grid--4">
+                        <div class="input__column">
+                            <input type="text" name="fourth_sitelink_text_input" id="fourth_sitelink_text_input" maxlength="25" placeholder="Exemple"
+                                class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        
+                        <div class="input__column">
+                            <input type="text" name="fourth_sitelink_description_1_input" id="fourth_sitelink_description_1_input" maxlength="35"
+                                placeholder="Description 1" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="fourth_sitelink_description_2_input" id="fourth_sitelink_description_2_input" maxlength="35"
+                                placeholder="Description 2" class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                        <div class="input__column">
+                            <input type="text" name="fourth_sitelink_final_url_input" id="fourth_sitelink_final_url_input" maxlength="25" placeholder="URL Finale"
+                                class="tracking__input tracking__input--search" style="text-transform: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <input type="checkbox" name="display_phone_number_checkbox" id="display_phone_number_checkbox"
+                            class="tracking__input tracking__input--search adword_checkbox" style="text-transform: none;" required="">
+                    <label for="display_phone_number_checkbox">Afficher le numéro de téléphone</label>
+                    <input type="tel" name="display_phone_number" id="phone_number_input" class="tracking__input tracking__input--search"
+                            style="text-transform: none;" placeholder="514-111-1111" required="">
+                </div>
+
+                <div class="mt-8 input__row input__row--full">
+                    <input type="checkbox" name="display_location_checkbox" id="display_location_checkbox" class="tracking__input tracking__input--search adword_checkbox" style="text-transform: none;" required="">
+                    <label for="display_location_checkbox">Afficher le lieu</label>
+
+                    <input type="text" name="display_location" id="location_input" class="tracking__input tracking__input--search"
+                            style="text-transform: none;" required="">
+                </div>
+
+                <div class="text-center mt-8">
+                    <button type="submit" class="btn btn-solid-primary btn-round submit" >Export</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- ./End tracing -->
+
+<!-- Begining lets visit -->
+
+<section class="lets-visit">
+    <div class="lets-visit__wrapper">
+        <!-- 
+        <div class="lets-visit__graphics">
+            <img class="object-cover" src="./assets/images/graphics-bg.png" alt="">
+        </div>  -->
+        <div class="container">
+            <h2 class="lets-visit__title">we are always ready to help you</h2>
+            <a href="#" class="btn btn-solid-secondary btn-round">lets visit</a>
+        </div>
+    </div>
+
+    <div class="marquee lets-visit-marquee">
+        <h2 class="course__marquee-title"><img src="./assets/static-svgs/marquee-icon.svg" width="87" alt=""> Let’s Start</h2>
+        <h2 class="course__marquee-title"><img src="./assets/static-svgs/marquee-icon.svg" width="87" alt=""> Let’s Start</h2>
+        <h2 class="course__marquee-title"><img src="./assets/static-svgs/marquee-icon.svg" width="87" alt=""> Let’s Start</h2>
+        <h2 class="course__marquee-title"><img src="./assets/static-svgs/marquee-icon.svg" width="87" alt=""> Let’s Start</h2>
+    </div>
+</section>
+<!-- End lets visit -->

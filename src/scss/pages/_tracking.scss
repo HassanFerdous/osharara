@@ -162,4 +162,46 @@
             margin-top: 0;
         }
     }
+
+
+    &-preview {
+        &__head {
+            padding: rem(20px 16px 60px);
+            background-color: $primary;
+            color: $black;
+        }
+    }
+
+    &__form {
+        padding: rem(30px 16px 100px)
+    }
+}
+
+.input {
+    &__row {
+        position: relative;
+
+        label {
+            margin-bottom: rem(12px);
+            display: inline-block;
+        }
+    }
+
+
+    &-row {
+        &__grid {
+            display: grid;
+            grid-gap: rem(32px 33px);
+            
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &--4 {
+                @include media-breakpoint-up(lg) {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+        }
+    }
 }
