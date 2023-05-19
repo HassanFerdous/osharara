@@ -182,10 +182,14 @@ window.addEventListener('DOMContentLoaded', () => {
     formValidation('#register-form')
 
     const copyButton = document.querySelector('.tracking__input--copy')
+    const copySlugButton = document.querySelector('.tracking-preview__copy-btn')
     const copyUrl = document.querySelector('.js-copy-url')
 
     if (copyButton) {
         copyButton.addEventListener('click', copyToClipboard)
+    }
+    if (copySlugButton) {
+        copySlugButton.addEventListener('click', copyToClipboard)
     }
 
     if (copyUrl) {
@@ -195,7 +199,7 @@ window.addEventListener('DOMContentLoaded', () => {
     async function copyToClipboard(event) {
         event.preventDefault()
 
-        let input = document.querySelector('.tracking__input--copy')
+        let input = document.querySelector('.tracking__input-copy')
         // Select the text field
         input.select()
         input.setSelectionRange(0, 99999) // For mobile devices
@@ -206,6 +210,6 @@ window.addEventListener('DOMContentLoaded', () => {
         await navigator.clipboard.writeText(input.value)
 
         // Alert the copied text
-        alert('Campaign URL has been copied to your clipboard.')
+        alert('URL has been copied to your clipboard.')
     }
 })

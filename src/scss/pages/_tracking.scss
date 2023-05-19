@@ -33,13 +33,17 @@
             border-radius: 50px;
         }
 
+        &--password {
+            @extend .tracking-preview__input;
+            background-color: $white;
+        }
+
         &-error {
             margin-top: rem(20px);
             display: block;
             font-size: rem(17px);
             line-height: rem(20px);
         }
-
     }
 
     &__title {
@@ -170,10 +174,119 @@
             background-color: $primary;
             color: $black;
         }
+
+        &__inputs {
+            position: relative;
+        }
+
+        &__input {
+            @include placeholder-color($tertiary);
+            font-weight: 400;
+            font-size: rem(20px);
+            padding: rem(10px 50px 10px 20px);
+            border: 1px solid $secondary;
+            border-radius: 50px;
+            color: $tertiary;
+
+            @include media-breakpoint-up(lg) {
+                padding: rem(33px 100px 30px 51px);
+                font-size: rem(30px);
+            }
+        }
+
+        &__label {
+            display: block;
+            font-size: rem(16px);
+            line-height: rem(36px);
+            color: $tertiary;
+            text-align: center;
+
+            @include media-breakpoint-up(lg) {
+                font-size: rem(30px);
+                line-height: rem(85px);
+            }
+        }
+
+        &__copy-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            border: 0;
+            width: rem(50px);
+            height: 100%;
+
+            @include media-breakpoint-up(lg) {
+                width: rem(100px);
+            }
+
+            svg {
+                @include media-breakpoint-down(lg) {
+                    width: rem(20px);
+                }
+            }
+        }
     }
 
     &__form {
-        padding: rem(30px 16px 100px)
+        padding: rem(30px 16px 100px);
+    }
+
+    &-password {
+        background: linear-gradient(178.25deg, #FFFFFF 1.49%, #E8F2FF 111.83%);
+        color: $tertiary;
+    }
+
+    &__input {
+        &-row {
+            label {
+                @extend .tracking-preview__label;
+                text-align: left;
+                font-weight: 400;
+            }
+        }
+
+        &-wrap {
+            grid-gap: 12px;
+        }
+
+        &-btn {
+            @include text(rem(20px), null, $secondary, 600);
+            padding: rem(10px 40px);
+            border: 1px solid $secondary;
+            border-radius: 50px;
+            background-color: $white;
+            width: 100%;
+            max-width: 473px;
+            margin-top: rem(10px);
+
+            @include media-breakpoint-up(lg) {
+                @include text(rem(30px), null, $secondary, 600);
+                padding: rem(10px 40px);
+                margin-top: 0;
+            }
+
+            svg {
+                margin-right: rem(17px);
+            }
+        }
+    }
+
+    &-submit {
+        font-size: rem(20px);
+        letter-spacing: 0;
+
+        @include media-breakpoint-up(lg) {
+            font-size: rem(30px);
+        }
+
+        svg {
+            margin-right: rem(10px);
+
+            @include media-breakpoint-down(lg) {
+                width: rem(16px);
+            }
+        }
     }
 }
 
@@ -192,7 +305,7 @@
         &__grid {
             display: grid;
             grid-gap: rem(32px 33px);
-            
+
             @include media-breakpoint-up(lg) {
                 grid-template-columns: repeat(3, 1fr);
             }

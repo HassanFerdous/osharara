@@ -66,12 +66,20 @@
 }
 
 
-.adWord_simulator_container {
-    padding: rem(40px 66px);
+.tracking-preview__container {
+    padding: rem(12px);
     background: $white;
     border: rem(23px) solid $blue-900;
     border-radius: rem(37px);
     margin-top: rem(-40px);
+
+    @include media-breakpoint-up(lg) {
+        padding: rem(40px 66px);
+    }
+    
+    &--no-radius {
+        border-radius: 0;
+    }
 }
 
 
