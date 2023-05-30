@@ -8,7 +8,7 @@
     }
 
     &__input {
-        @include placeholder-color($white);
+        @include placeholder-color(currentColor);
         margin: 0;
         padding: 12px 0;
         background-color: transparent;
@@ -17,7 +17,7 @@
         font-size: rem(20px);
         line-height: rem(28px);
         font-weight: 700;
-        color: $white;
+        color: currentColor;
         text-transform: capitalize;
         border: 0;
         border-bottom: 1px solid $white;
@@ -230,6 +230,15 @@
 
     &__form {
         padding: rem(30px 16px 100px);
+
+        &--light {
+            background: linear-gradient(178.25deg, #FFFFFF 1.49%, #E8F2FF 111.83%);
+            color: $gray-600;
+
+            .tracking__input {
+                border-color: $gray-600;
+            }
+        }
     }
 
     &-password {
