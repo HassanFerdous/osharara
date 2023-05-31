@@ -297,6 +297,128 @@
             }
         }
     }
+
+
+    &-status {
+        margin-top: rem(30px);
+        color: $gray-600;
+
+        @include media-breakpoint-up(lg) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+
+        &__submit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &-table {
+        width: 100%;
+        border-style: hidden;
+        table-layout: fixed;
+
+        &__wrapper {
+            border: 1px solid $blue-900;
+            border-radius: rem(15px);
+            margin-top: rem(50px);
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 0;
+                border-radius: rem(30px);
+            }
+        }
+
+        td {
+            padding: rem(8px 12px);
+            border: 1px solid $blue-900;
+
+            @include media-breakpoint-up(lg) {
+                padding: rem(15px 44px);
+            }
+        }
+
+        tr {
+            &:first-child {
+                td:first-child {
+                    border-top-left-radius: rem(30px);
+                }
+            }
+
+
+            td {
+                &:first-child {
+                    width: 30%;
+                }
+            }
+        }
+
+        &__row {
+
+            &-blue {
+                color: #2472E7;
+            }
+
+            &-green {
+                color: #0F650D;
+            }
+
+            &-yellow {
+                color: #9D860A;
+            }
+
+            &-red {
+                color: #C31414;
+            }
+        }
+
+        &--links {
+            td {
+                background-color: $white;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: rem(30px);
+                    line-height: rem(58px);
+                }
+            }
+
+            tr {
+                td:first-child {
+                    width: 80%;
+                    border-top-left-radius: rem(15px);
+                    border-bottom-left-radius: rem(15px);
+
+                    @include media-breakpoint-up(lg) {
+                        border-top-left-radius: rem(30px);
+                        border-bottom-left-radius: rem(30px);
+                    }
+                }
+
+                td:last-child {
+                    text-align: center;
+                    border-top-right-radius: rem(15px);
+                    border-bottom-right-radius: rem(15px);
+
+                    @include media-breakpoint-up(lg) {
+                        border-top-right-radius: rem(30px);
+                        border-bottom-right-radius: rem(30px);
+                    }
+                }
+            }
+        }
+    }
+
+
+    &-links {
+        &__header {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: rem(70px);
+            }
+        }
+    }
 }
 
 .input {
