@@ -18,9 +18,10 @@
         line-height: rem(28px);
         font-weight: 700;
         color: currentColor;
-        text-transform: capitalize;
+        //text-transform: capitalize;
         border: 0;
         border-bottom: 1px solid $white;
+        
 
         @include media-breakpoint-up(lg) {
             font-size: rem(29.5925px);
